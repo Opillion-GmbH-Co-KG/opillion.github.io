@@ -1,1 +1,26 @@
-Hello World
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Projektübersicht</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Projektübersicht</h1>
+    <canvas id="myChart"></canvas>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Projekt 1', 'Projekt 2', 'Projekt 3'],
+                datasets: [{
+                    label: 'Fortschritt',
+                    data: [12, 19, 3],
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
+
